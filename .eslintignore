@@ -1,0 +1,12 @@
+/src/reportWebVitals.ts
+/src/react-app-env.d.ts
+/src/constants/regex.ts
+/src/service-worker.ts
+/config-overrides.js
+src/assets/libs
+.gitlab-ci.yml
+.eslintrc.js
+node_modules
+.gitignore
+static
+build

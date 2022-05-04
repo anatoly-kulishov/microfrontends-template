@@ -13,8 +13,6 @@ export enum StatusEnum {
 
 export interface IApiState {}
 
-type DeviceSetupStatus = null | StatusEnum;
-
 export const openAccountSetupModalGAC = (): IAction => {
   // Global Action Creator for opening Account setup modal
   return {
