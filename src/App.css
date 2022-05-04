@@ -1,0 +1,9 @@
+.App {
+    height: 100vh;
+    background-color: #eee;
+    text-align: center;
+}
+
+.AppTitle {
+    margin: 0 0 5px;
+}
