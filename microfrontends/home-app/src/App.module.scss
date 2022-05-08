@@ -1,0 +1,17 @@
+@use 'src/assets/styles/variables' as *;
+
+.Wrapper {
+  height: calc(100vh - (80px + 60px)); // 100vh - (headerHeight - footerHeight)
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $green_400;
+}
+
+.Title {
+  margin: 0;
+  color: $white;
+}
