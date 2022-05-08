@@ -1,8 +1,25 @@
 import { IAction } from 'redux-micro-frontend';
 
+import { ChatStatusEnum, ErrorMessage, IChatConnectionData, ProfileDataStatus } from './store/storeTypes';
+
 export enum GlobalStoreFoldersEnum {
   API = 'API',
-  EnrollmentPortal = 'EnrollmentPortal',
+  MAIN_PORTAL = 'MAIN_PORTAL',
+  HOME = 'HOME',
+  PROFILE = 'PROFILE',
+  MESSENGER = 'MESSENGER',
+}
+
+export enum AppRoutesEnum {
+  HOME = '/',
+  MESSENGER = 'messenger',
+  PROFILE = 'profile',
+}
+
+export enum AppRoutesTitleEnum {
+  HOME = 'Home',
+  MESSENGER = 'Messenger',
+  PROFILE = 'Profile',
 }
 
 export enum StatusEnum {
@@ -11,12 +28,34 @@ export enum StatusEnum {
   DENIED = 'denied',
 }
 
-export interface IApiState {}
+export interface IApiState {
+  Login: {
+    isLoading: boolean;
 
-export const openAccountSetupModalGAC = (): IAction => {
-  // Global Action Creator for opening Account setup modal
+    signInError: ErrorMessage;
+    signInAccepted: boolean;
+
+    recreatePasswordError: ErrorMessage;
+    recreatePasswordAccepted: boolean;
+  };
+  Profile: {
+    data: any;
+    status: ProfileDataStatus;
+    putStatus: ProfileDataStatus;
+  };
+  Chat: {
+    connection: IChatConnectionData | null;
+    history: any;
+    fileStatus: ChatStatusEnum | null | string;
+    error: string;
+    unreadMessageCounter: number;
+    path: any;
+  };
+}
+
+export const checkAuthGAC = (): IAction => {
   return {
-    type: 'ACCOUNT_SETUP/OPEN_MODAL',
+    type: 'API/LOGIN/CHECK_AUTH',
     payload: null,
   };
 };

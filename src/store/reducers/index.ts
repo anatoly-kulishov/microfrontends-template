@@ -1,14 +1,13 @@
-import { Action, combineReducers } from 'redux';
-import { ThunkAction } from 'redux-thunk';
+import { combineReducers } from 'redux';
+import { connectRouter } from 'connected-react-router';
+import { History } from 'history';
 
-import { appReducer } from './appReducer/appReducer';
+import { apiReducer } from './apiReducer/apiReducer';
+import { errorReducer } from './errorReducer/errorReducer';
 
-export const reducers = combineReducers({
-  app: appReducer,
-});
-
-export type RootReducerType = typeof reducers;
-
-export type AppStateType = ReturnType<RootReducerType>;
-export type InferActionsTypes<T> = T extends { [keys: string]: (...args: any[]) => infer U } ? U : never;
-export type BaseThunkType<A extends Action = Action, R = Promise<void>> = ThunkAction<R, AppStateType, unknown, A>;
+export const createRootReducer = (history: History) =>
+  combineReducers({
+    router: connectRouter(history),
+    api: apiReducer,
+    error: errorReducer,
+  });

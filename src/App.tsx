@@ -1,23 +1,27 @@
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React, { FC, useEffect } from 'react';
+import { GlobalStore } from 'redux-micro-frontend';
 
-import { getAppState } from './store/selectors/app-selectors';
-import { useActions } from './store';
-import './App.css';
+import { WithLoading } from './components/WithLoading/WithLoading';
+import { AuthRoutes } from './routes/AuthRoutes/AuthRoutes';
+import { AppRoutes } from './routes/AppRoutes/AppRoutes';
+import { getLoginApiState } from './store/selectors/auth-selectors';
+import { useTypedSelector } from './store';
+import { checkAuthGAC, GlobalStoreFoldersEnum } from './globalStoreUtils';
+import { SPINNER_SIZE } from './constants/general';
+import styles from './App.module.scss';
 
-export function App() {
-  const { initialized } = useSelector(getAppState);
-  const { initializeApp } = useActions();
+const globalStore = GlobalStore.Get();
+
+export const App: FC = () => {
+  const { signInAccepted, isLoading } = useTypedSelector(getLoginApiState);
 
   useEffect(() => {
-    initializeApp();
+    globalStore.DispatchGlobalAction(GlobalStoreFoldersEnum.MAIN_PORTAL, checkAuthGAC());
   }, []);
 
   return (
-    <div className="App">
-      <h1 className="AppTitle">microfrontends-template: {`${initialized}`}</h1>
-      <first-app />
-      <second-app />
-    </div>
+    <WithLoading isLoading={isLoading} spinnerSize={SPINNER_SIZE}>
+      <div className={styles.Wrapper}>{!signInAccepted ? <AppRoutes /> : <AuthRoutes />}</div>
+    </WithLoading>
   );
-}
+};

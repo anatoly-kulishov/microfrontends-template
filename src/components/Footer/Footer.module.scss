@@ -1,0 +1,16 @@
+@import 'src/assets/styles/variables';
+
+.Wrapper {
+  min-height: 60px;
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  background-color: $grey_100;
+}

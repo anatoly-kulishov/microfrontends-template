@@ -10,3 +10,5 @@ node_modules
 .gitignore
 static
 build
+/microfrontends/api-middleware/
+/src/react-table-config.d.ts

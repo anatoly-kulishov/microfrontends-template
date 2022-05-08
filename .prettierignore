@@ -11,3 +11,4 @@ public
 *.png
 .gitignore
 .gitlab-ci.yml
+/microfrontends/api-middleware/

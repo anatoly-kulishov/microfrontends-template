@@ -1,0 +1,24 @@
+@import 'src/assets/styles/variables';
+
+.Wrapper {
+  height: 80px;
+  padding: 5px 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $grey_100;
+}
+
+.Title {
+  margin: 0 0 5px;
+}
+
+.Navigation > * {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,1 +1,8 @@
-export * from './app-action-type';
+export enum ActionType {
+  SET_LOGIN_STATE = 'SET_LOGIN_STATE',
+  SET_PROFILE_STATE = 'SET_PROFILE_STATE',
+  SET_CHAT_STATE = 'SET_CHAT_STATE',
+
+  SET_ERROR = 'SET_ERROR',
+  CLEAN_ERROR = 'CLEAN_ERROR',
+}
