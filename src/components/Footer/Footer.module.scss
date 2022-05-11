@@ -13,4 +13,8 @@
   line-height: 1.4;
 
   background-color: $grey_100;
+
+  & > a:hover {
+    text-decoration: none;
+  }
 }

@@ -9,7 +9,7 @@ export const Footer: FC = memo(() => {
     <div className={styles.Wrapper}>
       © {currentYear} {PROJECT_NAME} <br />
       <a href="https://www.linkedin.com/in/anatoliy-kulishov/" target="_blank" rel="noopener noreferrer">
-        Developed by by Anatoly
+        Developed by Anatoly
       </a>
     </div>
   );
