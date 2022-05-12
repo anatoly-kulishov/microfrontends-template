@@ -4,6 +4,7 @@ import { AppWithSettings } from './App';
 
 class AppCustomElement extends HTMLElement {
   connectedCallback() {
+    // const appSomeAttribute = this.getAttribute('someAttribute');
     ReactDOM.render(AppWithSettings, this);
   }
 

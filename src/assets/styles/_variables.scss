@@ -12,6 +12,7 @@ $grey_550: #5c5c5c;
 $grey_600: rgba(51, 51, 51, 0.3);
 $grey_650: rgba(51, 51, 51, 0.5);
 $grey_700: #333333;
+$grey_900: #212529;
 
 $blue_100: #A5DEFF;
 $blue_200: rgba(69, 66, 210, 0.1);
@@ -31,9 +32,9 @@ $yellow_100: #FFAD31;
 $yellow_200: #FFEEC4;
 
 $shadow_1: 0px 16px 32px rgba(0, 0, 0, 0.07);
-$shadow_2: 0px 4px 32px rgba(0, 0, 0, 0.08);
+$shadow_2: 0px 4px 32px rgba(255, 255, 255, .1);
 $shadow_3: 0px 2px 8px rgba(0, 0, 0, 0.05);
-$shadow_navbar: 0 16px 32px rgba(0,0,0,.1);
+$shadow_navbar: 0 16px 32px rgba(0, 0, 0, .1);
 
 $text-color: $grey_700;
 $secondary-text-color: $grey_650;

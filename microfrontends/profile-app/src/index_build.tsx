@@ -1,11 +1,10 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { App } from './App';
+import { AppWithSettings } from './App';
 
 class AppCustomElement extends HTMLElement {
   connectedCallback() {
-    ReactDOM.render(<App />, this);
+    ReactDOM.render(AppWithSettings, this);
   }
 
   disconnectedCallback() {
