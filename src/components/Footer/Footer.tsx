@@ -1,6 +1,6 @@
 import React, { FC, memo } from 'react';
 
-import { PROJECT_NAME } from '../../constants/general';
+import { AUTHOR_LINKED_URL, PROJECT_NAME } from '../../constants/general';
 import styles from './Footer.module.scss';
 
 export const Footer: FC = memo(() => {
@@ -8,7 +8,7 @@ export const Footer: FC = memo(() => {
   return (
     <div className={styles.Wrapper}>
       © {currentYear} {PROJECT_NAME} <br />
-      <a href="https://www.linkedin.com/in/anatoliy-kulishov/" target="_blank" rel="noopener noreferrer">
+      <a href={AUTHOR_LINKED_URL} target="_blank" rel="noopener noreferrer">
         Developed by Anatoly
       </a>
     </div>

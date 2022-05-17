@@ -1,0 +1,27 @@
+@use 'src/assets/styles/variables' as *;
+
+.Form {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.FormBody {
+  text-align: center;
+}
+
+.FormFooter {
+  margin-top: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ForgotPasswordLink {
+  padding-left: 6px;
+
+  font-size: 12px;
+  line-height: 1;
+  color: $grey_700;
+  cursor: pointer;
+}

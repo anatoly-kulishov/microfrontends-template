@@ -1,0 +1,26 @@
+@use 'src/assets/styles/variables' as *;
+
+.Wrapper {
+  height: 100vh;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $grey_100;
+}
+
+.Row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.Title {
+  margin: 0 10px 0 0;
+  line-height: 1.4;
+  color: $grey_700;
+}

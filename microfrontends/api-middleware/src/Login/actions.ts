@@ -1,10 +1,5 @@
-import { LoginActionType } from "./action-types";
-import {
-  SignInFormValues,
-  Email,
-  RecreatePasswordFormValues,
-  ErrorMessage,
-} from "./types";
+import { LoginActionType } from './action-types';
+import { Email, ErrorMessage, RecreatePasswordFormValues, SignInFormValues } from './types';
 
 export interface APICheckAuthAction {
   type: LoginActionType.API_LOGIN_CHECK_AUTH;
@@ -14,12 +9,15 @@ export interface APISignInAction {
   type: LoginActionType.API_LOGIN_SIGN_IN;
   payload: SignInFormValues;
 }
+
 export interface SignInStartAction {
   type: LoginActionType.SIGN_IN_START;
 }
+
 export interface SignInAcceptedAction {
   type: LoginActionType.SIGN_IN_ACCEPTED;
 }
+
 export interface SignInDeniedAction {
   type: LoginActionType.SIGN_IN_DENIED;
   payload: ErrorMessage;
@@ -38,19 +36,22 @@ export interface APIRecreatePasswordAction {
   type: LoginActionType.API_LOGIN_RECREATE_PASSWORD;
   payload: RecreatePasswordFormValues;
 }
+
 export interface RecreatePasswordStartAction {
   type: LoginActionType.RECREATE_PASSWORD_START;
 }
+
 export interface RecreatePasswordAcceptedAction {
   type: LoginActionType.RECREATE_PASSWORD_ACCEPTED;
 }
+
 export interface RecreatePasswordDeniedAction {
   type: LoginActionType.RECREATE_PASSWORD_DENIED;
   payload: ErrorMessage;
 }
 
 export interface APIRefreshErrorsAction {
-  type: LoginActionType.API_LOGIN_REFRESH_STATE;
+  type: LoginActionType.API_LOGIN_;
 }
 
 export type LoginAction =

@@ -6,6 +6,7 @@ declare global {
       'home-app': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
       'messenger-app': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
       'profile-app': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
+      'login-app': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
     }
   }
 }

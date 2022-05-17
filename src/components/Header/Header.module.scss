@@ -8,14 +8,15 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: $grey_200;
+  background-color: $grey_100;
 }
 
 .Title {
   margin: 0 0 5px;
 }
 
-.Navigation > * {
+.Navigation .btn,
+.Navigation a {
   margin-right: 10px;
 
   &:last-child {
@@ -24,6 +25,6 @@
 }
 
 .LogOutButton {
-  margin-left: 15px;
+  margin-left: 12px;
   cursor: pointer;
 }

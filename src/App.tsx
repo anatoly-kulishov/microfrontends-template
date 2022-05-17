@@ -21,7 +21,7 @@ export const App: FC = () => {
 
   return (
     <WithLoading isLoading={isLoading} spinnerSize={SPINNER_SIZE}>
-      <div className={styles.Wrapper}>{!signInAccepted ? <AppRoutes /> : <AuthRoutes />}</div>
+      <div className={styles.Wrapper}>{signInAccepted ? <AppRoutes /> : <AuthRoutes />}</div>
     </WithLoading>
   );
 };

@@ -32,7 +32,7 @@ $yellow_100: #FFAD31;
 $yellow_200: #FFEEC4;
 
 $shadow_1: 0px 16px 32px rgba(0, 0, 0, 0.07);
-$shadow_2: 0px 4px 32px rgba(0, 0, 0, 0.08);
+$shadow_2: 0px 4px 32px rgba(255, 255, 255, .1);
 $shadow_3: 0px 2px 8px rgba(0, 0, 0, 0.05);
 $shadow_navbar: 0 16px 32px rgba(0, 0, 0, .1);
 
@@ -125,8 +125,6 @@ $input-error-color: $red_600;
 $input-disabled-border: $grey_400;
 $input-disabled-color: $grey_600;
 
-$phone-number-prefix-color: $grey_650;
-
 /*textarea*/
 $textarea-border: $grey_200;
 $textarea-bg: $white;
@@ -167,24 +165,6 @@ $modal-question-divider: #E7E7E7;
 /*footer*/
 $footer-bg: $grey_550;
 $footer-color: $grey_450;
-
-/*ask-question*/
-$ask-question-bg: $grey_100;
-
-/*signature*/
-$signature-control-bg: $grey_150;
-$signature-wrapper-border: $border-color;
-$signature-wrapper-shadow: $shadow_1;
-
-/*consent-proccess-page*/
-$consent-proccess-page-bg: $white;
-$consent-proccess-page-shadow: $shadow_1;
-
-//Steps
-$StepProgress-shadow: $shadow_2;
-$step-unavailable-color: $blue_300;
-$step-unavailable-indicator-border: $blue_300;
-$step-active-color: $blue_500;
 
 /*accordion*/
 $accordion-heading-color: $grey_700;

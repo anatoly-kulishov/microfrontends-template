@@ -8,6 +8,7 @@ export enum GlobalStoreFoldersEnum {
   HOME = 'HOME',
   PROFILE = 'PROFILE',
   MESSENGER = 'MESSENGER',
+  LOGIN = 'LOGIN',
 }
 
 export enum AppRoutesEnum {
@@ -56,6 +57,13 @@ export interface IApiState {
 export const checkAuthGAC = (): IAction => {
   return {
     type: 'API/LOGIN/CHECK_AUTH',
+    payload: null,
+  };
+};
+
+export const logOutGAC = (): IAction => {
+  return {
+    type: 'API/LOGIN/SIGN_OUT',
     payload: null,
   };
 };

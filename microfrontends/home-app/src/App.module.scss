@@ -4,10 +4,6 @@
   height: calc(100vh - (80px + 60px)); // 100vh - (headerHeight - footerHeight)
   padding: 15px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   background-color: $grey_900;
 }
@@ -15,7 +11,8 @@
 .HeadRow {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .Title {

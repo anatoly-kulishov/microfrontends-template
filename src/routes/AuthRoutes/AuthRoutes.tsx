@@ -8,12 +8,10 @@ import styles from './AuthRoutes.module.scss';
 export const AuthRoutes: FC = () => {
   return (
     <div className={styles.Wrapper}>
-      <div>
-        <Routes>
-          <Route path={AppRoutesEnum.HOME} element={<LoginPage />} />
-          <Route path="*" element={<Navigate to={AppRoutesEnum.HOME} />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path={AppRoutesEnum.HOME} element={<LoginPage />} />
+        <Route path="*" element={<Navigate to={AppRoutesEnum.HOME} />} />
+      </Routes>
     </div>
   );
 };
